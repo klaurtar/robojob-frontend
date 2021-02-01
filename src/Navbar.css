@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@700&display=swap');
+
+a {
+  font-family: 'Turret Road', cursive;
+  font-weight: 700;
+}
+
+.bg-light {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 137, 211, 1) 0%,
+    rgba(186, 167, 252, 0.5) 100%
+  ) !important;
+}

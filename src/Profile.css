@@ -1,0 +1,68 @@
+.Profile {
+  padding: 10px;
+}
+
+.wrapperClassName {
+  width: 75%;
+  margin: 1vh auto 0 auto;
+}
+
+.editorClassName {
+  border: 1px solid #f1f1f1;
+}
+
+.clicked-tab {
+  /* background: linear-gradient(
+    90deg,
+    rgba(201, 137, 211, 1) 0%,
+    rgba(186, 167, 252, 0.5) 100%
+  ) !important;
+  width: 150px;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  text-align: center; */
+}
+
+.profile-buttons {
+  cursor: pointer;
+  /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+  height: 50px;
+  width: 150px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-buttons:not(:last-child) {
+  margin-right: 10px;
+}
+
+.profile-buttons:hover {
+  border-bottom: 2px solid black;
+}
+
+.active {
+  box-shadow: purple 0px 30px 60px -12px inset,
+    rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset !important;
+  color: white;
+}
+
+.username {
+  text-align: center;
+}
+
+.cover-letter-info {
+  width: 75%;
+  margin: 30px auto 0 auto;
+}
+
+.button-holder {
+  width: 75%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-end;
+}

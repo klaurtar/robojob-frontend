@@ -29,10 +29,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-        RoboJob
-        <span role="img" aria-label="emoji">
-          🤖
-        </span>
+        <img className="logo" src="/Ninja-9to5_logo_H.png" alt="logo" />
       </Link>
 
       <div className="d-flex justify-content-end ml-auto">

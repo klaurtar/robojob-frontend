@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { LoggedInContext } from './contexts/LoggedIn';
+import Navbar from './Navbar';
+import FriendCodeContainer from './FriendCodeContainer';
 import Search from './Search';
 import SignIn from './SignIn';
 import Profile from './Profile';
+import SqueezePage from './SqueezePage';
 import './App.css';
 
 const RouteSwitch = () => {
@@ -13,16 +16,19 @@ const RouteSwitch = () => {
     <>
       {loading ? (
         <div className="loading-screen">
-          <span role="img" aria-label="emoji" className="robo-logo">
-            🤖
-          </span>
+          <img src="/Ninja-9to5_logo_Stacked.png" alt="Logo Stacked" />
         </div>
       ) : (
-        <Switch>
-          <Route exact path="/" render={() => <Search />} />
-          <Route exact path="/signin" render={() => <SignIn />} />
-          <Route exact path="/profile" render={() => <Profile />} />
-        </Switch>
+        <>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" render={() => <Search />} />
+            <Route exact path="/signin" render={() => <SignIn />} />
+            <Route exact path="/profile" render={() => <Profile />} />
+            <Route exact path="/squeeze" render={() => <SqueezePage />} />
+          </Switch>
+          <FriendCodeContainer />
+        </>
       )}
     </>
   );

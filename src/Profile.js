@@ -13,7 +13,6 @@ const Profile = () => {
 
   return (
     <>
-      <Navbar />
       {loggedIn ? (
         <div className="Profile">
           <div className="d-flex justify-content-end">

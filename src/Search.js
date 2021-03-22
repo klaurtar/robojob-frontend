@@ -94,7 +94,6 @@ const Form = () => {
 
   return (
     <div className="App">
-      <Navbar />
       <div className="container">
         <div className="row">
           <div className="col-sm-6 my-3 offset-sm-3 ">

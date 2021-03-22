@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import Navbar from './Navbar';
 import axios from 'axios';
 import { LoggedInContext } from './contexts/LoggedIn';
 
@@ -44,7 +43,6 @@ const SignIn = () => {
 
   return (
     <div className="App">
-      <Navbar />
       <div className="container">
         <div className="row">
           <div className="col-sm-6 my-3 offset-sm-3 ">

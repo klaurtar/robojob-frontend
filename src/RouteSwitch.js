@@ -22,12 +22,12 @@ const RouteSwitch = () => {
         <>
           <Navbar />
           <Switch>
-            <Route exact path="/" render={() => <Search />} />
-            <Route exact path="/signin" render={() => <SignIn />} />
+            <Route exact path="/" render={() => <SqueezePage />} />
+            {/* <Route exact path="/signin" render={() => <SignIn />} />
             <Route exact path="/profile" render={() => <Profile />} />
-            <Route exact path="/squeeze" render={() => <SqueezePage />} />
+            <Route exact path="/squeeze" render={() => <SqueezePage />} /> */}
           </Switch>
-          <FriendCodeContainer />
+          {/* <FriendCodeContainer /> */}
         </>
       )}
     </>

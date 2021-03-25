@@ -32,7 +32,7 @@ const Navbar = () => {
         <img className="logo" src="/Ninja-9to5_logo_H.png" alt="logo" />
       </Link>
 
-      <div className="d-flex justify-content-end ml-auto">
+      {/* <div className="d-flex justify-content-end ml-auto">
         {loggedIn ? (
           <>
             <Link to="/profile" className="align-self-center mr-3">
@@ -45,7 +45,7 @@ const Navbar = () => {
         ) : (
           <Link to="/signin">Sign In</Link>
         )}
-      </div>
+      </div> */}
     </nav>
   );
 };

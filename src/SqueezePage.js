@@ -1,8 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FadeInSection from './FadeInSection';
+import validator from 'validator';
 import './SqueezePage.css';
 
 const SqueezePage = () => {
+  const [email, setEmail] = useState('');
+  const [numberOfSignUps, setNumberOfSignUps] = useState(0);
+
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const clickHandler = async (e) => {
+    e.preventDefault();
+    if (validator.isEmail(email)) {
+      const myHeaders = new Headers();
+      myHeaders.append('Content-Type', 'application/json');
+
+      const raw = JSON.stringify({ email });
+
+      const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow',
+      };
+
+      const rawData = await fetch(
+        `"http://localhost:1337/api/v1/email`,
+        requestOptions
+      );
+
+      const finalData = await rawData.json();
+      console.log(finalData);
+      resetEmail();
+      calculateSignUpSpotsLeft(finalData.length);
+    } else {
+      console.log('Not working');
+    }
+  };
+
+  const resetEmail = () => {
+    setEmail('');
+  };
+
+  const calculateSignUpSpotsLeft = (num) => {
+    let spotsLeft = 100 - num;
+    setNumberOfSignUps(spotsLeft);
+  };
+
   return (
     <div className="SqueezePage">
       <div className="container">
@@ -73,7 +119,7 @@ const SqueezePage = () => {
                 </ul>
                 <div className="number-container">
                   <strong>Spots Left:</strong>
-                  <span className="big-money">27</span>
+                  <span className="big-money">{numberOfSignUps}</span>
                 </div>
 
                 <form>
@@ -85,10 +131,15 @@ const SqueezePage = () => {
                         id="newsletterEmail"
                         aria-describedby="emailHelp"
                         placeholder="kakashi@hiddenleaf.com"
+                        value={email}
+                        onChange={emailHandler}
                       />
                     </div>
                     <div className="col-4">
-                      <button className="btn btn-primary">
+                      <button
+                        className="btn btn-primary"
+                        onClick={clickHandler}
+                      >
                         Join Newsletter
                       </button>
                     </div>

@@ -8,7 +8,11 @@ a {
 .bg-light {
   background: linear-gradient(
     90deg,
-    rgba(201, 137, 211, 1) 0%,
+    rgba(201, 137, 211, 0.3) 0%,
     rgba(186, 167, 252, 0.5) 100%
   ) !important;
+}
+
+.logo {
+  width: 200px;
 }
